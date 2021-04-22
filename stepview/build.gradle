@@ -3,29 +3,29 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 group='com.github.meylingtjan'
 
-//ext {
-//    bintrayRepo = 'StepView'
-//    bintrayName = 'stepview'
-//
-//    publishedGroupId = 'com.shuhart.stepview'
-//    libraryName = 'stepview'
-//    artifact = 'stepview'
-//
-//    libraryDescription = 'A simple animated StepView for Android'
-//
-//    siteUrl = 'https://github.com/shuhart/StepView'
-//    gitUrl = 'https://github.com/shuhart/StepView.git'
-//
-//    libraryVersion = '1.5.1'
-//
-//    developerId = 'shuhart'
-//    developerName = 'Redrick Shuhart'
-//    developerEmail = 'kornev.b@gmail.com'
-//
-//    licenseName = 'The Apache Software License, Version 2.0'
-//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//    allLicenses = ["Apache-2.0"]
-//}
+ext {
+    bintrayRepo = 'StepView'
+    bintrayName = 'stepview'
+
+    publishedGroupId = 'com.meylingtjan.stepview'
+    libraryName = 'stepview'
+    artifact = 'stepview'
+
+    libraryDescription = 'A simple animated step view with customize state of the steps for Android'
+
+    siteUrl = 'https://github.com/meylingtjan/StepView'
+    gitUrl = 'https://github.com/meylingtjan/StepView.git'
+
+    libraryVersion = '1.5.2'
+
+    developerId = 'meylingtjan'
+    developerName = 'Meyling Tjandra'
+    developerEmail = 'vania.harianto@bithealth.co.id'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 buildscript {
     repositories {
@@ -63,47 +63,47 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
 }
 
-//group = publishedGroupId
-//version = libraryVersion
+group = publishedGroupId
+version = libraryVersion
 
-//install {
-//    repositories.mavenInstaller {
-//        // This generates POM.xml with proper parameters
-//        pom {
-//            project {
-//                packaging 'aar'
-//                groupId publishedGroupId
-//                artifactId artifact
-//
-//                // Add your description here
-//                name libraryName
-//                description libraryDescription
-//                url siteUrl
-//
-//                // Set your license
-//                licenses {
-//                    license {
-//                        name licenseName
-//                        url licenseUrl
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        id developerId
-//                        name developerName
-//                        email developerEmail
-//                    }
-//                }
-//                scm {
-//                    connection gitUrl
-//                    developerConnection gitUrl
-//                    url siteUrl
-//
-//                }
-//            }
-//        }
-//    }
-//}
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                groupId publishedGroupId
+                artifactId artifact
+
+                // Add your description here
+                name libraryName
+                description libraryDescription
+                url siteUrl
+
+                // Set your license
+                licenses {
+                    license {
+                        name licenseName
+                        url licenseUrl
+                    }
+                }
+                developers {
+                    developer {
+                        id developerId
+                        name developerName
+                        email developerEmail
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+
+                }
+            }
+        }
+    }
+}
 
 if (project.hasProperty("android")) { // Android libraries
     task sourcesJar(type: Jar) {
@@ -117,31 +117,30 @@ artifacts {
 }
 
 // Bintray
-//File localProps = project.rootProject.file('local.properties')
-//
-//if (localProps.exists()) {
-//    Properties properties = new Properties()
-//    properties.load(localProps.newDataInputStream())
-//
-//    bintray {
-//        user = properties.getProperty("bintray.user")
-//        key = properties.getProperty("bintray.apikey")
-//
-//        configurations = ['archives']
-//        pkg {
-//            repo = bintrayRepo
-//            name = bintrayName
-//            desc = libraryDescription
-//            websiteUrl = siteUrl
-//            vcsUrl = gitUrl
-//            licenses = allLicenses
-//            publish = true
-//            publicDownloadNumbers = true
-//            version {
-//                name = libraryVersion
-//                desc = libraryDescription
-//            }
-//        }
-//    }
-//}
+File localProps = project.rootProject.file('local.properties')
 
+if (localProps.exists()) {
+    Properties properties = new Properties()
+    properties.load(localProps.newDataInputStream())
+
+    bintray {
+        user = properties.getProperty("bintray.user")
+        key = properties.getProperty("bintray.apikey")
+
+        configurations = ['archives']
+        pkg {
+            repo = bintrayRepo
+            name = bintrayName
+            desc = libraryDescription
+            websiteUrl = siteUrl
+            vcsUrl = gitUrl
+            licenses = allLicenses
+            publish = true
+            publicDownloadNumbers = true
+            version {
+                name = libraryVersion
+                desc = libraryDescription
+            }
+        }
+    }
+}
