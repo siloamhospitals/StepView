@@ -1,22 +1,21 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-group='com.github.meylingtjan'
 
 ext {
     bintrayRepo = 'StepView'
     bintrayName = 'stepview'
 
-    publishedGroupId = 'com.meylingtjan.stepview'
-    libraryName = 'stepview'
-    artifact = 'stepview'
+    publishedGroupId = 'com.meylingtjan'
+    libraryName = 'Stepview'
+    artifact = 'Stepview'
 
     libraryDescription = 'A simple animated step view with customize state of the steps for Android'
 
     siteUrl = 'https://github.com/meylingtjan/StepView'
     gitUrl = 'https://github.com/meylingtjan/StepView.git'
 
-    libraryVersion = '1.5.2'
+    libraryVersion = '1.5.4'
 
     developerId = 'meylingtjan'
     developerName = 'Meyling Tjandra'
