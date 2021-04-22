@@ -1,4 +1,4 @@
-StepView
+StepView    [![](https://jitpack.io/v/meylingtjan/StepView.svg)](https://jitpack.io/#meylingtjan/StepView)
 ======================
 
 A simple animated step view for Android. It displays the name of the step and an icon as index of the step with the state of the step (completed or not completed).
