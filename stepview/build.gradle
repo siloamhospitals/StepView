@@ -6,14 +6,14 @@ ext {
     bintrayRepo = 'StepView'
     bintrayName = 'stepview'
 
-    publishedGroupId = 'com.meylingtjan'
+    publishedGroupId = 'com.siloamhospitals'
     libraryName = 'Stepview'
     artifact = 'Stepview'
 
     libraryDescription = 'A simple animated step view with customize state of the steps for Android'
 
-    siteUrl = 'https://github.com/meylingtjan/StepView'
-    gitUrl = 'https://github.com/meylingtjan/StepView.git'
+    siteUrl = 'https://github.com/siloamhospitals/StepView'
+    gitUrl = 'https://github.com/siloamhospitals/StepView.git'
 
     libraryVersion = '1.5.4'
 
